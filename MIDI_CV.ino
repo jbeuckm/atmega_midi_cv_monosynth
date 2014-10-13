@@ -3,9 +3,6 @@
 
 #define LED 13   		    // LED pin on Arduino Uno
 
-#define AI1 A1                                  //Analog input monitor 1
-#define AI2 A2                                  //Analog input monitor 2
-
 //define AnalogOutput (MOSI_pin, SCK_pin, CS_pin, DAC_x, GAIN) 
 AH_MCP4922 AnalogOutput1(11,10,12,LOW,HIGH);
 AH_MCP4922 AnalogOutput2(11,10,12,HIGH,HIGH);
@@ -13,7 +10,7 @@ AH_MCP4922 AnalogOutput2(11,10,12,HIGH,HIGH);
 AH_MCP4922 AnalogOutput3(8,7,9,LOW,HIGH);
 AH_MCP4922 AnalogOutput4(8,7,9,HIGH,HIGH);
 
-
+int liveNoteCount = 0;
 
 MIDI_CREATE_DEFAULT_INSTANCE();
 
@@ -22,13 +19,19 @@ void handleNoteOn(byte channel, byte pitch, byte velocity)
 {
   digitalWrite(LED,HIGH);
   
+  liveNoteCount++;
+  
   AnalogOutput1.setValue((pitch - 12) * 42);
   AnalogOutput2.setValue(velocity * 32);
 }
 
 void handleNoteOff(byte channel, byte pitch, byte velocity)
 {
-        digitalWrite(LED,LOW);
+  liveNoteCount--;
+  
+  if (liveNoteCount == 0) {
+    digitalWrite(LED,LOW);
+  }
 }
 
 void handleControlChange(byte channel, byte number, byte value)
