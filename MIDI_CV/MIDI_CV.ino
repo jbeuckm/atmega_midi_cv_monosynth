@@ -17,12 +17,12 @@ MIDI_CREATE_DEFAULT_INSTANCE();
 
 void handleNoteOn(byte channel, byte pitch, byte velocity)
 {
-  digitalWrite(LED,HIGH);
-  
   liveNoteCount++;
   
   AnalogOutput1.setValue((pitch - 12) * 42);
   AnalogOutput2.setValue(velocity * 32);
+
+  digitalWrite(LED,HIGH);
 }
 
 void handleNoteOff(byte channel, byte pitch, byte velocity)
@@ -43,7 +43,7 @@ void handleControlChange(byte channel, byte number, byte value)
 
 void handlePitchBend(byte channel, int bend)
 {
-    AnalogOutput4.setValue(bend/4 + 2048);
+    AnalogOutput4.setValue(bend/4.0 + 2048.0);
 }
 
 
@@ -68,9 +68,11 @@ void setup()
     
     // C8 at full velocity for calibration on powerup
     handleNoteOn(1, 108, 127);
+    liveNoteCount--;
 }
 
 void loop()
 {
     MIDI.read();
 }
+
