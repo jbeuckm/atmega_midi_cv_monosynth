@@ -4,11 +4,12 @@
 #define LED 13   		    // LED pin on Arduino Uno
 
 //define AnalogOutput (MOSI_pin, SCK_pin, CS_pin, DAC_x, GAIN) 
-AH_MCP4922 AnalogOutput1(11,10,12,LOW,HIGH);
-AH_MCP4922 AnalogOutput2(11,10,12,HIGH,HIGH);
 
-AH_MCP4922 AnalogOutput3(8,7,9,LOW,HIGH);
-AH_MCP4922 AnalogOutput4(8,7,9,HIGH,HIGH);
+AH_MCP4922 AnalogOutput1(11,10,12,LOW,LOW);
+AH_MCP4922 AnalogOutput2(11,10,12,HIGH,LOW);
+
+AH_MCP4922 AnalogOutput3(8,7,9,LOW,LOW);
+AH_MCP4922 AnalogOutput4(8,7,9,HIGH,LOW);
 
 int liveNoteCount = 0;
 
