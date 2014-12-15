@@ -40,9 +40,9 @@ void handleNoteOn(byte channel, byte pitch, byte velocity)
 /*  
     digitalWrite(Gate1,HIGH);
     digitalWrite(Gate2,HIGH);
+    */
     digitalWrite(Gate3,HIGH);
     digitalWrite(Gate4,HIGH);
-    */
 }
 
 void handleNoteOff(byte channel, byte pitch, byte velocity)
@@ -57,9 +57,9 @@ void handleNoteOff(byte channel, byte pitch, byte velocity)
 /*    
     digitalWrite(Gate1,LOW);
     digitalWrite(Gate2,LOW);
+    */
     digitalWrite(Gate3,LOW);
     digitalWrite(Gate4,LOW);
-    */
   }
 }
 
@@ -87,8 +87,10 @@ void handlePitchBend(byte channel, int bend)
 void setup()
 {
     pinMode(LED, OUTPUT);
+/*    
     pinMode(Gate1, OUTPUT);
     pinMode(Gate2, OUTPUT);
+*/    
     pinMode(Gate3, OUTPUT);
     pinMode(Gate4, OUTPUT);
     
