@@ -10061,6 +10061,8 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <part name="PAD12" library="wirepad" deviceset="2,54/0,9" device="" value="reset"/>
 <part name="PAD13" library="wirepad" deviceset="2,54/0,9" device="" value="reset "/>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
+<part name="PAD14" library="wirepad" deviceset="2,54/0,9" device="" value="gate LED"/>
+<part name="GND11" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -10138,6 +10140,8 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <instance part="PAD12" gate="1" x="5.08" y="83.82" rot="MR0"/>
 <instance part="PAD13" gate="1" x="10.16" y="83.82" rot="MR180"/>
 <instance part="GND9" gate="1" x="20.32" y="81.28"/>
+<instance part="PAD14" gate="1" x="7.62" y="0" rot="MR0"/>
+<instance part="GND11" gate="1" x="-5.08" y="-2.54"/>
 </instances>
 <busses>
 </busses>
@@ -10349,6 +10353,11 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <pinref part="PAD13" gate="1" pin="P"/>
 <pinref part="GND9" gate="1" pin="GND"/>
 <wire x1="12.7" y1="83.82" x2="20.32" y2="83.82" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<wire x1="-5.08" y1="0" x2="5.08" y2="0" width="0.1524" layer="91"/>
+<pinref part="PAD14" gate="1" pin="P"/>
+<pinref part="GND11" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="+12V" class="0">

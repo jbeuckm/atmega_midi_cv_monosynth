@@ -10043,6 +10043,7 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <part name="U$4" library="MCP4822" deviceset="MCP4822-E/P" device=""/>
 <part name="U$5" library="MCP4822" deviceset="MCP4822-E/P" device=""/>
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
+<part name="PAD7" library="wirepad" deviceset="2,54/0,9" device="" value="gate output"/>
 </parts>
 <sheets>
 <sheet>
@@ -10099,6 +10100,7 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <instance part="U$4" gate="A" x="106.68" y="124.46"/>
 <instance part="U$5" gate="A" x="106.68" y="60.96"/>
 <instance part="GND10" gate="1" x="86.36" y="38.1"/>
+<instance part="PAD7" gate="1" x="55.88" y="5.08" rot="MR0"/>
 </instances>
 <busses>
 </busses>
@@ -10529,6 +10531,15 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <pinref part="U$5" gate="A" pin="VOUTA"/>
 <pinref part="IC1" gate="C" pin="+IN"/>
 <wire x1="124.46" y1="66.04" x2="142.24" y2="66.04" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$10" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="PB5(SCK)"/>
+<wire x1="43.18" y1="15.24" x2="45.72" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="45.72" y1="15.24" x2="45.72" y2="5.08" width="0.1524" layer="91"/>
+<pinref part="PAD7" gate="1" pin="P"/>
+<wire x1="45.72" y1="5.08" x2="53.34" y2="5.08" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
