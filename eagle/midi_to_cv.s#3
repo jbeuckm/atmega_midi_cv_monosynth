@@ -10063,7 +10063,6 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
 <part name="PAD14" library="wirepad" deviceset="2,54/0,9" device="" value="gate LED"/>
 <part name="GND11" library="supply1" deviceset="GND" device=""/>
-<part name="IC3" library="linear" deviceset="TL084" device="P"/>
 <part name="P-2" library="supply1" deviceset="-12V" device=""/>
 <part name="P-3" library="supply1" deviceset="-12V" device=""/>
 <part name="P+7" library="supply1" deviceset="+12V" device=""/>
@@ -10147,12 +10146,12 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <instance part="GND9" gate="1" x="20.32" y="81.28"/>
 <instance part="PAD14" gate="1" x="7.62" y="0" rot="MR0"/>
 <instance part="GND11" gate="1" x="-5.08" y="-2.54"/>
-<instance part="IC3" gate="P" x="68.58" y="2.54"/>
 <instance part="IC1" gate="P" x="149.86" y="127"/>
 <instance part="P-2" gate="1" x="91.44" y="-7.62"/>
 <instance part="P-3" gate="1" x="170.18" y="116.84"/>
 <instance part="P+7" gate="1" x="149.86" y="139.7"/>
 <instance part="P+8" gate="1" x="68.58" y="15.24"/>
+<instance part="IC2" gate="P" x="68.58" y="2.54"/>
 </instances>
 <busses>
 </busses>
@@ -10379,9 +10378,9 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <wire x1="-38.1" y1="88.9" x2="-38.1" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="IC3" gate="P" pin="V+"/>
 <pinref part="P+8" gate="1" pin="+12V"/>
 <wire x1="68.58" y1="10.16" x2="68.58" y2="12.7" width="0.1524" layer="91"/>
+<pinref part="IC2" gate="P" pin="V+"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="P" pin="V+"/>
@@ -10397,14 +10396,14 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <wire x1="-38.1" y1="83.82" x2="-38.1" y2="76.2" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="IC3" gate="P" pin="V-"/>
-<pinref part="P-2" gate="1" pin="-12V"/>
-<wire x1="68.58" y1="-5.08" x2="91.44" y2="-5.08" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="IC1" gate="P" pin="V-"/>
 <pinref part="P-3" gate="1" pin="-12V"/>
 <wire x1="149.86" y1="119.38" x2="170.18" y2="119.38" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="IC2" gate="P" pin="V-"/>
+<pinref part="P-2" gate="1" pin="-12V"/>
+<wire x1="68.58" y1="-5.08" x2="91.44" y2="-5.08" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$2" class="0">

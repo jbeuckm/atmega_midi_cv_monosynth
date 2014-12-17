@@ -10058,6 +10058,9 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <part name="R21" library="rcl" deviceset="R-US_" device="0207/10" value="1k"/>
 <part name="R22" library="rcl" deviceset="R-US_" device="0207/10" value="1k"/>
 <part name="R23" library="rcl" deviceset="R-US_" device="0207/10" value="1k"/>
+<part name="PAD12" library="wirepad" deviceset="2,54/0,9" device="" value="reset"/>
+<part name="PAD13" library="wirepad" deviceset="2,54/0,9" device="" value="reset "/>
+<part name="GND9" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -10132,6 +10135,9 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <instance part="R21" gate="G$1" x="45.72" y="-20.32"/>
 <instance part="R22" gate="G$1" x="45.72" y="-35.56"/>
 <instance part="R23" gate="G$1" x="45.72" y="-50.8"/>
+<instance part="PAD12" gate="1" x="5.08" y="83.82" rot="MR0"/>
+<instance part="PAD13" gate="1" x="10.16" y="83.82" rot="MR180"/>
+<instance part="GND9" gate="1" x="20.32" y="81.28"/>
 </instances>
 <busses>
 </busses>
@@ -10165,6 +10171,9 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <pinref part="U1" gate="G$1" pin="PC6(/RESET)"/>
 <pinref part="R1" gate="G$1" pin="2"/>
 <wire x1="-5.08" y1="73.66" x2="-5.08" y2="83.82" width="0.1524" layer="91"/>
+<pinref part="PAD12" gate="1" pin="P"/>
+<wire x1="2.54" y1="83.82" x2="-5.08" y2="83.82" width="0.1524" layer="91"/>
+<junction x="-5.08" y="83.82"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -10335,6 +10344,11 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <pinref part="R21" gate="G$1" pin="1"/>
 <pinref part="R22" gate="G$1" pin="1"/>
 <pinref part="R23" gate="G$1" pin="1"/>
+</segment>
+<segment>
+<pinref part="PAD13" gate="1" pin="P"/>
+<pinref part="GND9" gate="1" pin="GND"/>
+<wire x1="12.7" y1="83.82" x2="20.32" y2="83.82" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+12V" class="0">
