@@ -11315,7 +11315,7 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
 <<<<<<< HEAD
 <part name="PIN13LED2" library="wirepad" deviceset="2,54/0,9" device="" value="activity LED"/>
-<part name="R4" library="rcl" deviceset="R-US_" device="0207/10" value="10k"/>
+<part name="R4" library="rcl" deviceset="R-US_" device="0207/10" value="2k"/>
 <part name="RST1" library="wirepad" deviceset="2,54/0,9" device="" value="reset"/>
 <part name="RST2" library="wirepad" deviceset="2,54/0,9" device="" value="reset "/>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
@@ -11327,11 +11327,11 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 <part name="P+9" library="supply1" deviceset="+5V" device=""/>
 <part name="GND12" library="supply1" deviceset="GND" device=""/>
 <part name="R24" library="rcl" deviceset="R-US_" device="0207/10" value="1M"/>
-<part name="R25" library="rcl" deviceset="R-US_" device="0207/10" value="1k"/>
+<part name="R25" library="rcl" deviceset="R-US_" device="0207/10" value="4.7k"/>
 <part name="P+10" library="supply1" deviceset="+12V" device=""/>
 <part name="GND13" library="supply1" deviceset="GND" device=""/>
 <part name="GATE" library="wirepad" deviceset="2,54/0,9" device="" value="gate output"/>
-<part name="R16" library="rcl" deviceset="R-US_" device="0207/10" value="1k"/>
+<part name="R16" library="rcl" deviceset="R-US_" device="0207/10" value="4.7k"/>
 <part name="P+8" library="supply1" deviceset="+12V" device=""/>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
 <part name="DEL_GATE" library="wirepad" deviceset="2,54/0,9" device="" value="gate output"/>
@@ -11402,6 +11402,18 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
 <part name="PAD14" library="wirepad" deviceset="2,54/0,9" device="" value="gate LED"/>
 <part name="GND11" library="supply1" deviceset="GND" device=""/>
+<part name="P-2" library="supply1" deviceset="-12V" device=""/>
+<part name="P-3" library="supply1" deviceset="-12V" device=""/>
+<part name="P+7" library="supply1" deviceset="+12V" device=""/>
+<part name="P+8" library="supply1" deviceset="+12V" device=""/>
+<part name="PAD15" library="wirepad" deviceset="2,54/0,9" device="" value="gate"/>
+<part name="PAD16" library="wirepad" deviceset="2,54/0,9" device="" value="gate"/>
+<part name="PAD17" library="wirepad" deviceset="2,54/0,9" device="" value="gate"/>
+<part name="PAD18" library="wirepad" deviceset="2,54/0,9" device="" value="gate"/>
+<part name="PAD19" library="wirepad" deviceset="2,54/0,9" device="" value="gate"/>
+<part name="PAD20" library="wirepad" deviceset="2,54/0,9" device="" value="gate"/>
+<part name="PAD21" library="wirepad" deviceset="2,54/0,9" device="" value="gate"/>
+<part name="PAD22" library="wirepad" deviceset="2,54/0,9" device="" value="gate"/>
 >>>>>>> 6261e1cb0fc8199bf189311a6b3fe9abed85a22f
 </parts>
 <sheets>
@@ -11488,7 +11500,7 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 <instance part="GND10" gate="1" x="86.36" y="38.1"/>
 <<<<<<< HEAD
 <instance part="PIN13LED2" gate="1" x="12.7" y="5.08" rot="MR180"/>
-<instance part="R4" gate="G$1" x="33.02" y="7.62"/>
+<instance part="R4" gate="G$1" x="33.02" y="5.08"/>
 <instance part="RST1" gate="1" x="5.08" y="83.82" rot="MR0"/>
 <instance part="RST2" gate="1" x="10.16" y="83.82" rot="MR180"/>
 <instance part="GND9" gate="1" x="20.32" y="81.28"/>
@@ -11588,6 +11600,20 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 <instance part="GND9" gate="1" x="20.32" y="81.28"/>
 <instance part="PAD14" gate="1" x="7.62" y="0" rot="MR0"/>
 <instance part="GND11" gate="1" x="-5.08" y="-2.54"/>
+<instance part="IC1" gate="P" x="149.86" y="127"/>
+<instance part="P-2" gate="1" x="91.44" y="-7.62"/>
+<instance part="P-3" gate="1" x="170.18" y="116.84"/>
+<instance part="P+7" gate="1" x="149.86" y="139.7"/>
+<instance part="P+8" gate="1" x="68.58" y="15.24"/>
+<instance part="IC2" gate="P" x="68.58" y="2.54"/>
+<instance part="PAD15" gate="1" x="53.34" y="5.08"/>
+<instance part="PAD16" gate="1" x="53.34" y="-15.24"/>
+<instance part="PAD17" gate="1" x="53.34" y="-30.48"/>
+<instance part="PAD18" gate="1" x="53.34" y="-45.72"/>
+<instance part="PAD19" gate="1" x="55.88" y="50.8" rot="MR0"/>
+<instance part="PAD20" gate="1" x="60.96" y="45.72" rot="MR0"/>
+<instance part="PAD21" gate="1" x="58.42" y="40.64" rot="MR0"/>
+<instance part="PAD22" gate="1" x="50.8" y="38.1" rot="MR0"/>
 >>>>>>> 6261e1cb0fc8199bf189311a6b3fe9abed85a22f
 </instances>
 <busses>
@@ -11938,16 +11964,6 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 <pinref part="GND15" gate="1" pin="GND"/>
 <wire x1="53.34" y1="-45.72" x2="53.34" y2="-55.88" width="0.1524" layer="91"/>
 </segment>
-<segment>
-<pinref part="PAD13" gate="1" pin="P"/>
-<pinref part="GND9" gate="1" pin="GND"/>
-<wire x1="12.7" y1="83.82" x2="20.32" y2="83.82" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<wire x1="-5.08" y1="0" x2="5.08" y2="0" width="0.1524" layer="91"/>
-<pinref part="PAD14" gate="1" pin="P"/>
-<pinref part="GND11" gate="1" pin="GND"/>
-</segment>
 </net>
 <net name="+12V" class="0">
 <segment>
@@ -11957,10 +11973,19 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 <wire x1="-38.1" y1="88.9" x2="-38.1" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 <segment>
+<<<<<<< HEAD
+=======
+<pinref part="P+8" gate="1" pin="+12V"/>
+<wire x1="68.58" y1="10.16" x2="68.58" y2="12.7" width="0.1524" layer="91"/>
+<pinref part="IC2" gate="P" pin="V+"/>
+</segment>
+<segment>
+>>>>>>> 6261e1cb0fc8199bf189311a6b3fe9abed85a22f
 <pinref part="IC1" gate="P" pin="V+"/>
 <pinref part="P+7" gate="1" pin="+12V"/>
 <wire x1="149.86" y1="134.62" x2="149.86" y2="137.16" width="0.1524" layer="91"/>
 </segment>
+<<<<<<< HEAD
 <segment>
 <pinref part="R18" gate="G$1" pin="2"/>
 <pinref part="P+10" gate="1" pin="+12V"/>
@@ -11971,6 +11996,8 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 <pinref part="P+8" gate="1" pin="+12V"/>
 <wire x1="53.34" y1="-12.7" x2="53.34" y2="-10.16" width="0.1524" layer="91"/>
 </segment>
+=======
+>>>>>>> 6261e1cb0fc8199bf189311a6b3fe9abed85a22f
 </net>
 <net name="-12V" class="0">
 <segment>
@@ -11984,6 +12011,14 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 <pinref part="P-3" gate="1" pin="-12V"/>
 <wire x1="149.86" y1="119.38" x2="170.18" y2="119.38" width="0.1524" layer="91"/>
 </segment>
+<<<<<<< HEAD
+=======
+<segment>
+<pinref part="IC2" gate="P" pin="V-"/>
+<pinref part="P-2" gate="1" pin="-12V"/>
+<wire x1="68.58" y1="-5.08" x2="91.44" y2="-5.08" width="0.1524" layer="91"/>
+</segment>
+>>>>>>> 6261e1cb0fc8199bf189311a6b3fe9abed85a22f
 </net>
 <net name="N$2" class="0">
 <segment>
@@ -12199,9 +12234,9 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 <segment>
 <pinref part="U1" gate="G$1" pin="PB5(SCK)"/>
 <wire x1="43.18" y1="15.24" x2="45.72" y2="15.24" width="0.1524" layer="91"/>
-<wire x1="45.72" y1="15.24" x2="45.72" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="45.72" y1="15.24" x2="45.72" y2="5.08" width="0.1524" layer="91"/>
 <pinref part="R4" gate="G$1" pin="2"/>
-<wire x1="45.72" y1="7.62" x2="38.1" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="45.72" y1="5.08" x2="38.1" y2="5.08" width="0.1524" layer="91"/>
 <wire x1="45.72" y1="15.24" x2="116.84" y2="15.24" width="0.1524" layer="91"/>
 <wire x1="116.84" y1="15.24" x2="116.84" y2="-12.7" width="0.1524" layer="91"/>
 <junction x="45.72" y="15.24"/>
@@ -12212,28 +12247,49 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 <net name="N$11" class="0">
 <segment>
 <pinref part="R4" gate="G$1" pin="1"/>
+<<<<<<< HEAD
 <pinref part="PIN13LED2" gate="1" pin="P"/>
-<wire x1="27.94" y1="7.62" x2="15.24" y2="5.08" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="5.08" x2="15.24" y2="5.08" width="0.1524" layer="91"/>
+=======
+<pinref part="PAD11" gate="1" pin="P"/>
+<wire x1="27.94" y1="7.62" x2="15.24" y2="0" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$31" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="PD1(TXD)"/>
+<wire x1="43.18" y1="48.26" x2="53.34" y2="50.8" width="0.1524" layer="91"/>
+<pinref part="PAD19" gate="1" pin="P"/>
+>>>>>>> 6261e1cb0fc8199bf189311a6b3fe9abed85a22f
 </segment>
 </net>
 <net name="N$32" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="PD2(INT0)"/>
 <wire x1="43.18" y1="45.72" x2="58.42" y2="45.72" width="0.1524" layer="91"/>
-<wire x1="58.42" y1="45.72" x2="58.42" y2="0" width="0.1524" layer="91"/>
-<wire x1="58.42" y1="0" x2="45.72" y2="0" width="0.1524" layer="91"/>
+<<<<<<< HEAD
+<wire x1="58.42" y1="45.72" x2="58.42" y2="-5.08" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="-5.08" x2="45.72" y2="-5.08" width="0.1524" layer="91"/>
 <pinref part="R10" gate="G$1" pin="2"/>
-<wire x1="45.72" y1="0" x2="45.72" y2="-10.16" width="0.1524" layer="91"/>
+<wire x1="45.72" y1="-5.08" x2="45.72" y2="-10.16" width="0.1524" layer="91"/>
+=======
+<pinref part="PAD20" gate="1" pin="P"/>
+>>>>>>> 6261e1cb0fc8199bf189311a6b3fe9abed85a22f
 </segment>
 </net>
 <net name="N$33" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="PD3(INT1)"/>
+<<<<<<< HEAD
 <wire x1="43.18" y1="43.18" x2="55.88" y2="43.18" width="0.1524" layer="91"/>
-<wire x1="55.88" y1="43.18" x2="55.88" y2="5.08" width="0.1524" layer="91"/>
-<wire x1="55.88" y1="5.08" x2="-12.7" y2="-5.08" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="43.18" x2="55.88" y2="-2.54" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="-2.54" x2="-12.7" y2="-2.54" width="0.1524" layer="91"/>
 <pinref part="R9" gate="G$1" pin="2"/>
-<wire x1="-12.7" y1="-5.08" x2="-12.7" y2="-10.16" width="0.1524" layer="91"/>
+<wire x1="-12.7" y1="-2.54" x2="-12.7" y2="-10.16" width="0.1524" layer="91"/>
+=======
+<wire x1="43.18" y1="43.18" x2="55.88" y2="40.64" width="0.1524" layer="91"/>
+<pinref part="PAD21" gate="1" pin="P"/>
+>>>>>>> 6261e1cb0fc8199bf189311a6b3fe9abed85a22f
 </segment>
 </net>
 <net name="N$43" class="0">
@@ -12271,9 +12327,15 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 </net>
 <net name="N$47" class="0">
 <segment>
+<<<<<<< HEAD
 <pinref part="R25" gate="G$1" pin="2"/>
 <wire x1="17.78" y1="-40.64" x2="17.78" y2="-43.18" width="0.1524" layer="91"/>
 <pinref part="LED1" gate="G$1" pin="C"/>
+=======
+<pinref part="IC2" gate="D" pin="+IN"/>
+<wire x1="55.88" y1="-45.72" x2="73.66" y2="-45.72" width="0.1524" layer="91"/>
+<pinref part="PAD18" gate="1" pin="P"/>
+>>>>>>> 6261e1cb0fc8199bf189311a6b3fe9abed85a22f
 </segment>
 </net>
 <net name="N$35" class="0">
@@ -12503,6 +12565,34 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 <pinref part="AMT" gate="G$1" pin="S"/>
 <pinref part="VELOC" gate="1" pin="P"/>
 <wire x1="187.96" y1="86.36" x2="185.42" y2="86.36" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$43" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="PD4(XCK/T0)"/>
+<wire x1="43.18" y1="40.64" x2="48.26" y2="38.1" width="0.1524" layer="91"/>
+<pinref part="PAD22" gate="1" pin="P"/>
+</segment>
+</net>
+<net name="N$44" class="0">
+<segment>
+<pinref part="IC2" gate="C" pin="+IN"/>
+<wire x1="55.88" y1="-30.48" x2="60.96" y2="-30.48" width="0.1524" layer="91"/>
+<pinref part="PAD17" gate="1" pin="P"/>
+</segment>
+</net>
+<net name="N$45" class="0">
+<segment>
+<pinref part="IC2" gate="B" pin="+IN"/>
+<wire x1="55.88" y1="-15.24" x2="73.66" y2="-15.24" width="0.1524" layer="91"/>
+<pinref part="PAD16" gate="1" pin="P"/>
+</segment>
+</net>
+<net name="N$46" class="0">
+<segment>
+<pinref part="PAD15" gate="1" pin="P"/>
+<pinref part="IC2" gate="A" pin="+IN"/>
+<wire x1="55.88" y1="5.08" x2="60.96" y2="5.08" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
