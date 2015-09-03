@@ -54,7 +54,6 @@ void handlePitchBend(byte channel, int bend)
   bend_rounded = min(bend_rounded, 2047);
   bend_rounded = max(bend_rounded, -2048);
   
-//    AnalogOutput4.setValue(2048 + bend_rounded);
 }
 
 
