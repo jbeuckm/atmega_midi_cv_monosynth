@@ -2137,15 +2137,15 @@ design rules under a new name.</description>
 <attribute name="OC_FARNELL" value="1439413" x="77.47" y="33.02" size="1.778" layer="27" display="off"/>
 </element>
 <element name="PIN13LED2" library="wirepad" package="2,54/0,9" value="activity LED" x="67.31" y="72.39"/>
-<element name="R4" library="rcl" package="0207/10" value="4.7k" x="66.04" y="58.42" rot="R270"/>
+<element name="R4" library="rcl" package="0207/10" value="2k" x="66.04" y="58.42" rot="R270"/>
 <element name="RST1" library="wirepad" package="2,54/0,9" value="reset" x="27.94" y="29.21"/>
 <element name="RST2" library="wirepad" package="2,54/0,9" value="reset " x="19.05" y="11.43"/>
 <element name="PIN13LED1" library="wirepad" package="2,54/0,9" value="activity LED" x="13.97" y="10.16"/>
 <element name="JP1" library="SparkFun-Connectors" package="2X3-NS" value="" x="60.96" y="55.88" rot="R270"/>
 <element name="R24" library="rcl" package="0207/10" value="1M" x="49.53" y="30.48" rot="R270"/>
-<element name="R25" library="rcl" package="0207/10" value="1k" x="20.32" y="25.4" rot="R90"/>
+<element name="R25" library="rcl" package="0207/10" value="4.7k" x="20.32" y="25.4" rot="R90"/>
 <element name="GATE" library="wirepad" package="2,54/0,9" value="gate output" x="10.16" y="15.24"/>
-<element name="R16" library="rcl" package="0207/10" value="1k" x="44.45" y="17.78"/>
+<element name="R16" library="rcl" package="0207/10" value="4.7k" x="44.45" y="17.78"/>
 <element name="DEL_GATE" library="wirepad" package="2,54/0,9" value="gate output" x="68.58" y="12.7"/>
 <element name="DELAY" library="pot" package="3RP/1610N" value="" x="96.52" y="16.51" rot="R90"/>
 <element name="U4" library="TR808clone" package="DIL14" value="4584N" x="11.43" y="-26.67"/>
