@@ -73,12 +73,18 @@ void handleControlChange(byte channel, byte number, byte value)
   }
 }
 
+
+
 void handlePitchBend(byte channel, int bend)
 {
-  if (channel != selectedChannel) {
-    return;
-  }
-    AnalogOutput2.setValue((float)bend/4.0 + 2048.0);
+
+  float bend_float = (float)bend;
+  float bend_scaled = bend_float / 4.0;
+  int bend_rounded = (int) bend_scaled;
+  
+  bend_rounded = min(bend_rounded, 2047);
+  bend_rounded = max(bend_rounded, -2048);
+  
 }
 
 
@@ -105,7 +111,7 @@ void setup()
     MIDI.setHandlePitchBend(handlePitchBend);
 
     // Initiate MIDI communications, listen to all channels
-    MIDI.begin(MIDI_CHANNEL_OMNI);
+    MIDI.begin(2);
     
     // C8 at full velocity for calibration on powerup
     handleNoteOn(17, 108, 127);
