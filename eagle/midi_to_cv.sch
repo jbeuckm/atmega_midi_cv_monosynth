@@ -11092,10 +11092,10 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 <part name="R9" library="rcl" deviceset="R-US_" device="0207/10" value="1k"/>
 <part name="R10" library="rcl" deviceset="R-US_" device="0207/10" value="1k"/>
 <part name="R17" library="rcl" deviceset="R-US_" device="0207/10" value="10k"/>
-<part name="R18" library="rcl" deviceset="R-US_" device="0207/10" value="20k"/>
+<part name="R18" library="rcl" deviceset="R-US_" device="0207/10" value="47k"/>
 <part name="R26" library="rcl" deviceset="R-US_" device="0207/10" value="1k"/>
 <part name="GND14" library="supply1" deviceset="GND" device=""/>
-<part name="R27" library="rcl" deviceset="R-US_" device="0207/10" value="20k"/>
+<part name="R27" library="rcl" deviceset="R-US_" device="0207/10" value="47k"/>
 <part name="R28" library="rcl" deviceset="R-US_" device="0207/10" value="10k"/>
 <part name="R29" library="rcl" deviceset="R-US_" device="0207/10" value="1k"/>
 </parts>

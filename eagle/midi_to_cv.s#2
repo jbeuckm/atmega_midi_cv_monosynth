@@ -11000,7 +11000,7 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 <part name="C2" library="rcl" deviceset="C-US" device="025-040X050" value="27pF"/>
 <part name="R1" library="rcl" deviceset="R-US_" device="0207/10" value="10k"/>
 <part name="OK1" library="optocoupler" deviceset="6N138" device=""/>
-<part name="C3" library="rcl" deviceset="C-US" device="025-040X050" value=".1uF"/>
+<part name="C3" library="rcl" deviceset="C-US" device="050-024X044" value=".1uF"/>
 <part name="IC1" library="linear" deviceset="TL084" device="P"/>
 <part name="D1" library="diode" deviceset="1N4148" device="DO35-10"/>
 <part name="R2" library="rcl" deviceset="R-US_" device="0207/10" value="220"/>
@@ -11070,7 +11070,7 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 <part name="GND18" library="supply1" deviceset="GND" device=""/>
 <part name="AMT" library="pot" deviceset="3RP/1610N" device="" value="100k"/>
 <part name="GND19" library="supply1" deviceset="GND" device=""/>
-<part name="C6" library="rcl" deviceset="C-US" device="025-040X050" value=".1uF"/>
+<part name="C6" library="rcl" deviceset="C-US" device="050-024X044" value=".1uF"/>
 <part name="P+13" library="supply1" deviceset="+5V" device=""/>
 <part name="GND20" library="supply1" deviceset="GND" device=""/>
 <part name="R21" library="rcl" deviceset="R-US_" device="0207/10" value="220"/>
@@ -11078,7 +11078,7 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 <part name="MTHRU_P4" library="wirepad" deviceset="2,54/0,9" device="" value="pad"/>
 <part name="MTHRU_P2" library="wirepad" deviceset="2,54/0,9" device="" value="pad"/>
 <part name="R22" library="rcl" deviceset="R-US_" device="0207/10" value="220"/>
-<part name="C5" library="rcl" deviceset="C-US" device="025-040X050" value=".1uF"/>
+<part name="C5" library="rcl" deviceset="C-US" device="050-024X044" value=".1uF"/>
 <part name="P+14" library="supply1" deviceset="+5V" device=""/>
 <part name="GND17" library="supply1" deviceset="GND" device=""/>
 <part name="R19" library="rcl" deviceset="R-US_" device="0207/10" value="220"/>
