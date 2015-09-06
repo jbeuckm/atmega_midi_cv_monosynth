@@ -2,10 +2,9 @@
 #include "AH_MCP4922.h"
 
 #define LED 13   		    // LED pin on Arduino Uno
-#define Gate1 1
-#define Gate2 2
-#define Gate3 3
-#define Gate4 4
+
+#define GATE_PIN 3
+#define DELAYED_GATE_PIN 2
 
 
 //define AnalogOutput (MOSI_pin, SCK_pin, CS_pin, DAC_x, GAIN) 
@@ -17,6 +16,8 @@ AH_MCP4922 AnalogOutput3(8,7,9,LOW,LOW);
 AH_MCP4922 AnalogOutput4(8,7,9,HIGH,LOW);
 
 int liveNoteCount = 0;
+int pitchbendOffset = 0;
+int baseNoteFrequency;
 
 MIDI_CREATE_DEFAULT_INSTANCE();
 
@@ -33,16 +34,14 @@ void handleNoteOn(byte channel, byte pitch, byte velocity)
   
   liveNoteCount++;
   
-  AnalogOutput1.setValue((pitch - 12) * 42);
-  AnalogOutput3.setValue(velocity * 32);
+  baseNoteFrequency = (pitch - 12) * 42;
+  AnalogOutput1.setValue(baseNoteFrequency + pitchbendOffset);
+  AnalogOutput2.setValue(velocity * 32);
 
   digitalWrite(LED,HIGH);
-/*  
-    digitalWrite(Gate1,HIGH);
-    digitalWrite(Gate2,HIGH);
-    */
-    digitalWrite(Gate3,HIGH);
-    digitalWrite(Gate4,HIGH);
+
+  digitalWrite(GATE_PIN, HIGH);
+  digitalWrite(DELAYED_GATE_PIN, HIGH);
 }
 
 void handleNoteOff(byte channel, byte pitch, byte velocity)
@@ -54,12 +53,9 @@ void handleNoteOff(byte channel, byte pitch, byte velocity)
   
   if (liveNoteCount == 0) {
     digitalWrite(LED,LOW);
-/*    
-    digitalWrite(Gate1,LOW);
-    digitalWrite(Gate2,LOW);
-    */
-    digitalWrite(Gate3,LOW);
-    digitalWrite(Gate4,LOW);
+
+    digitalWrite(DELAYED_GATE_PIN, LOW);
+    digitalWrite(GATE_PIN, LOW);
   }
 }
 
@@ -73,18 +69,24 @@ void handleControlChange(byte channel, byte number, byte value)
   }
 }
 
+void handleChannelPressure(byte channel, byte value)
+{
+  if (channel != selectedChannel) {
+    return;
+  }
+
+  AnalogOutput3.setValue(value * 32);
+}
+
+
+
 
 
 void handlePitchBend(byte channel, int bend)
 {
+  pitchbendOffset = bend >> 4;
 
-  float bend_float = (float)bend;
-  float bend_scaled = bend_float / 4.0;
-  int bend_rounded = (int) bend_scaled;
-  
-  bend_rounded = min(bend_rounded, 2047);
-  bend_rounded = max(bend_rounded, -2048);
-  
+  AnalogOutput1.setValue(baseNoteFrequency + pitchbendOffset);
 }
 
 
@@ -93,28 +95,22 @@ void handlePitchBend(byte channel, int bend)
 void setup()
 {
     pinMode(LED, OUTPUT);
-/*    
-    pinMode(Gate1, OUTPUT);
-    pinMode(Gate2, OUTPUT);
-*/    
-    pinMode(Gate3, OUTPUT);
-    pinMode(Gate4, OUTPUT);
-    
-    // Connect the handleNoteOn function to the library,
-    // so it is called upon reception of a NoteOn.
-    MIDI.setHandleNoteOn(handleNoteOn);  // Put only the name of the function
 
-    // Do the same for NoteOffs
+    pinMode(GATE_PIN, OUTPUT);
+    pinMode(DELAYED_GATE_PIN, OUTPUT);
+    
+    MIDI.setHandleNoteOn(handleNoteOn);
     MIDI.setHandleNoteOff(handleNoteOff);
+    MIDI.setHandlePitchBend(handlePitchBend);
     
     MIDI.setHandleControlChange(handleControlChange);
-    MIDI.setHandlePitchBend(handlePitchBend);
+    MIDI.setHandleAfterTouchChannel(handleChannelPressure);
 
-    // Initiate MIDI communications, listen to all channels
-    MIDI.begin(2);
+    MIDI.begin(10);
     
     // C8 at full velocity for calibration on powerup
     handleNoteOn(17, 108, 127);
+
     liveNoteCount--;
 }
 
