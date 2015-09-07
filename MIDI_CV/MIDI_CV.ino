@@ -46,9 +46,10 @@ void handleNoteOn(byte channel, byte pitch, byte velocity)
 
   digitalWrite(GATE_PIN, HIGH);
   
+  prepareDelayGateOff = false;
   delayLength = analogRead(DELAY_PERIOD_PIN);
   delayCounter = 0;
-  prepareDelayGateOn = true;  
+  prepareDelayGateOn = true;
 }
 
 void handleNoteOff(byte channel, byte pitch, byte velocity)
@@ -61,6 +62,7 @@ void handleNoteOff(byte channel, byte pitch, byte velocity)
   if (liveNoteCount == 0) {
     digitalWrite(GATE_PIN, LOW);
   
+    prepareDelayGateOn = false;
     delayLength = analogRead(DELAY_PERIOD_PIN);
     delayCounter = 0;
     prepareDelayGateOff = true;
